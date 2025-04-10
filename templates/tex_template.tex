@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\usepackage{linearA}
+%\usepackage[paperwidth=20cm, paperheight=20cm, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage[
+  paperwidth=17cm,   % Narrower width
+  paperheight=27cm,  % Taller height
+  left=.5cm,
+  right=1cm,
+  top=0cm,
+  bottom=1cm,
+  includeheadfoot
+]{geometry}
+
+\usepackage{minted}
+\usepackage{textcomp}
+
+\usepackage{xcolor}
+\usepackage[skins]{tcolorbox}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{mathptmx}
+\usepackage{fancyhdr}
+\usepackage[french]{babel}
+\usepackage[absolute]{textpos}
+
+
+\renewcommand{\headrulewidth}{0pt}
+
+\setlength{\headsep}{.1cm}
+\setlength{\footskip}{.1cm}
+  
+\setlength{\textwidth}{450pt}
+
+
+\begin{document}
+
+%\input{pagetitle.tex}
+
+\begin{tcolorbox}[title = Exercice 1 : CompteBancaire]
+    \begin{minted}{cpp}
+	// add your code here
+    \end{minted}
+\end{tcolorbox}
+\begin{tcolorbox}[
+	colback=black,     % Background color
+	coltext=white,     % Text color
+	colframe=gray!50,  % Border color
+	fontupper=\ttfamily, % Monospace font (terminal-like)
+	arc=0pt,           % Remove rounded corners
+	boxrule=0.5pt,     % Border thickness
+	title=Terminal,    % Title (optional)
+	titlerule=0pt,     % Remove title separator line
+	coltitle=black
+	]
+\textcolor{green}{oumalkelyas}:~\$ ./cb
+ // c'est le terminal
+\end{tcolorbox}
+\begin{tcolorbox}[
+	    title=Comments,
+	    colback=blue!20,
+	]
+// your comments here 
+
+\end{tcolorbox}
+
+\end{document}

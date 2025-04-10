@@ -1,14 +1,12 @@
 
 require "oe.options"
-require "oe.colorschemes"
 require "oe.keymaps"
 
 
 
+require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets" })
 
-
-
-
+--
 -- Set up LuaSnip with friendly-snippets
 require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -29,9 +27,10 @@ cmp.setup({
     { name = 'luasnip' }, -- Snippets
   })
 })
-
+--
 
 -- Enable auto-pairs
 require('nvim-autopairs').setup({
   disable_filetype = { "TelescopePrompt", "text" }, -- Optional: disable for certain file types
 })
+
