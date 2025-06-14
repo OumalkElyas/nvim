@@ -1,9 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define ll long long
-#define MOD int(1e9+7)
+#ifdef OE
 #define deb(x) cout << #x << ": " << x << "\n";
+#else
+#define deb(x) (void)0
+#endif
 
 void solve(){
 	

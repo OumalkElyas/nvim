@@ -42,4 +42,26 @@ return require('packer').startup(function(use)
     use 'eandrju/cellular-automaton.nvim' 
     use { "calind/selenized.nvim" }
     use {'iamcco/markdown-preview.nvim'}
+    use 'ThePrimeagen/vim-be-good'
+    use({
+	"nvim-neo-tree/neo-tree.nvim",
+	branch = "v3.x",
+	requires = {
+	    "nvim-lua/plenary.nvim",
+	    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+	    "MunifTanjim/nui.nvim",
+	    -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+	}
+    })
+    use{
+	"declancm/cinnamon.nvim",
+	version = "*", -- use latest release
+    }
+    use "sphamba/smear-cursor.nvim"
+    -- mysql plugins
+    use {
+	"tpope/vim-dadbod",
+	"kristijanhusak/vim-dadbod-completion",
+	"kristijanhusak/vim-dadbod-ui",
+    }
 end)
