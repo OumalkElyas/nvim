@@ -4,7 +4,7 @@ local function done()
     vim.cmd("echohl MoreMsg | echo \"done\" | echohl None")
 end
 
-vim.bo.makeprg='g++ -O2 -Wall -DOE -Wextra -o %:r %'
+vim.bo.makeprg='g++ -O2 -Wall -lSDL2 -std=c++23 -DOE -Wextra -o %:r %'
 vim.bo.errorformat = '%f:%l:%c %m'
 
 -- for compiling 
@@ -33,3 +33,9 @@ vim.keymap.set('n', '<leader>r', function()
   )
   vim.fn.jobstart(cmd, { detach = true })
 end, { buffer = true })
+
+-- receive test cases
+vim.keymap.set('n','<leader>t',':CompetiTest receive testcases | echo "ready :)" <CR>', {buffer = true})
+-- run test cases
+vim.keymap.set('n','<leader>x',':CompetiTest run<CR>', {buffer = true})
+

@@ -3,7 +3,7 @@ require "oe.options"
 require "oe.keymaps"
 
 
-
+--[[
 require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets" })
 
 
@@ -32,6 +32,6 @@ cmp.setup({
 require('nvim-autopairs').setup({
   disable_filetype = { "TelescopePrompt", "text" }, -- Optional: disable for certain file types
 })
-
+]]--
 
 

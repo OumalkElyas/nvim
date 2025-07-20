@@ -21,28 +21,25 @@ return require('packer').startup(function(use)
 	end
     })
 
-    --[[use({
-	'olimorris/onedarkpro.nvim',
-	as = 'onedarkpro',
-	config = function ()
-	    vim.cmd('colorscheme onedarkpro')  
-	end
-    })]]--
-
-
-    use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use{ 
+	'nvim-treesitter/nvim-treesitter',
+	run = ':TSUpdate',
+    }
 
     use 'frabjous/knap'
+    use 'neovim/nvim-lspconfig'
     use "folke/tokyonight.nvim"
     use {
 	'xeluxee/competitest.nvim',
 	requires = 'MunifTanjim/nui.nvim',
 	config = function() require('competitest').setup() end
     }
+    use 'ray-x/lsp_signature.nvim'
     use 'eandrju/cellular-automaton.nvim' 
-    use { "calind/selenized.nvim" }
+    use "calind/selenized.nvim"
+    use 'L3MON4D3/LuaSnip'
     use {'iamcco/markdown-preview.nvim'}
-    use 'ThePrimeagen/vim-be-good'
+    use {'ThePrimeagen/vim-be-good'}
     use({
 	"nvim-neo-tree/neo-tree.nvim",
 	branch = "v3.x",
@@ -53,15 +50,5 @@ return require('packer').startup(function(use)
 	    -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	}
     })
-    use{
-	"declancm/cinnamon.nvim",
-	version = "*", -- use latest release
-    }
-    use "sphamba/smear-cursor.nvim"
-    -- mysql plugins
-    use {
-	"tpope/vim-dadbod",
-	"kristijanhusak/vim-dadbod-completion",
-	"kristijanhusak/vim-dadbod-ui",
-    }
+
 end)

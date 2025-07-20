@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
 #ifdef OE
 #define deb(x) cout << #x << ": " << x << "\n";
@@ -12,10 +13,10 @@ void solve(){
 }
 
 int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    int t; cin >> t;
-    while(t--) 
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    int T; std::cin >> T;
+    while(T--) 
 	solve();
 
     return 0;

@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/o_elyas/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/home/o_elyas/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/home/o_elyas/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/home/o_elyas/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/o_elyas/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
+local package_path_str = "/home/oumalk/.cache/nvim/packer_hererocks/2.1.1748459687/share/lua/5.1/?.lua;/home/oumalk/.cache/nvim/packer_hererocks/2.1.1748459687/share/lua/5.1/?/init.lua;/home/oumalk/.cache/nvim/packer_hererocks/2.1.1748459687/lib/luarocks/rocks-5.1/?.lua;/home/oumalk/.cache/nvim/packer_hererocks/2.1.1748459687/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/oumalk/.cache/nvim/packer_hererocks/2.1.1748459687/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,119 +74,109 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["cellular-automaton.nvim"] = {
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/cellular-automaton.nvim",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/cellular-automaton.nvim",
     url = "https://github.com/eandrju/cellular-automaton.nvim"
-  },
-  ["cinnamon.nvim"] = {
-    loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/cinnamon.nvim",
-    url = "https://github.com/declancm/cinnamon.nvim"
   },
   ["competitest.nvim"] = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16competitest\frequire\0" },
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/competitest.nvim",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/competitest.nvim",
     url = "https://github.com/xeluxee/competitest.nvim"
   },
   knap = {
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/knap",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/knap",
     url = "https://github.com/frabjous/knap"
+  },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["neo-tree.nvim"] = {
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/nui.nvim",
     url = "https://github.com/MunifTanjim/nui.nvim"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["rose-pine"] = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/rose-pine",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
   ["selenized.nvim"] = {
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/selenized.nvim",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/selenized.nvim",
     url = "https://github.com/calind/selenized.nvim"
-  },
-  ["smear-cursor.nvim"] = {
-    loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/smear-cursor.nvim",
-    url = "https://github.com/sphamba/smear-cursor.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-be-good"] = {
     loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/vim-be-good",
     url = "https://github.com/ThePrimeagen/vim-be-good"
-  },
-  ["vim-dadbod"] = {
-    loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/vim-dadbod",
-    url = "https://github.com/tpope/vim-dadbod"
-  },
-  ["vim-dadbod-completion"] = {
-    loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/vim-dadbod-completion",
-    url = "https://github.com/kristijanhusak/vim-dadbod-completion"
-  },
-  ["vim-dadbod-ui"] = {
-    loaded = true,
-    path = "/home/o_elyas/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
-    url = "https://github.com/kristijanhusak/vim-dadbod-ui"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: rose-pine
-time([[Config for rose-pine]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
-time([[Config for rose-pine]], false)
 -- Config for: competitest.nvim
 time([[Config for competitest.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16competitest\frequire\0", "config", "competitest.nvim")
 time([[Config for competitest.nvim]], false)
+-- Config for: rose-pine
+time([[Config for rose-pine]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
+time([[Config for rose-pine]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
