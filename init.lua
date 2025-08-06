@@ -2,7 +2,6 @@
 require "oe.options"
 require "oe.keymaps"
 
-
 --[[
 require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets" })
 

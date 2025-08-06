@@ -13,18 +13,13 @@ return require('packer').startup(function(use)
 	requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use({
-	'rose-pine/neovim',
-	as = 'rose-pine',
-	config = function ()
-	    vim.cmd('colorscheme rose-pine')  
-	end
-    })
+    use 'rose-pine/neovim'
 
-    use{ 
-	'nvim-treesitter/nvim-treesitter',
-	run = ':TSUpdate',
-    }
+    -- both those for one theme 
+    use 'rktjmp/lush.nvim' 
+    use 'metalelf0/jellybeans-nvim'
+
+    use 'nvim-treesitter/nvim-treesitter'
 
     use 'frabjous/knap'
     use 'neovim/nvim-lspconfig'
@@ -50,5 +45,6 @@ return require('packer').startup(function(use)
 	    -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	}
     })
+    use "ellisonleao/gruvbox.nvim" 
 
 end)

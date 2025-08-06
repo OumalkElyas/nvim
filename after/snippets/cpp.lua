@@ -75,5 +75,24 @@ return {
 	    "}"
 	})
     }),
+
+    s("debug", {
+	t("#define deb(x) cout << #x << \" : \" << x << \"\\n\";"),
+    }),
+    s("Sieve", {
+	t({
+	    "vector<int> sieve() {",
+	    "    vector<int> primes;",
+	    "    bitset<N> seen;",
+	    "    for( int i = 2;i<N;++i) {",
+	    "        if(seen[i]) continue;",
+	    "        primes.push_back(i);",
+	    "        for(int j = 2*i;j<N;j+=i)",
+	    "            seen[j] = true;",
+	    "    }",
+	    "    return primes;",
+	    "}"
+	}),
+    }),
 }
 
