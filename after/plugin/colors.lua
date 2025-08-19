@@ -1,7 +1,7 @@
 
 math.randomseed(os.time())
 
-colors = {'retrobox','sorbet','selenized','jellybeans-nvim','tokyonight','ron','wildcharm','vim','unokai','slate','koehler'}
+colors = {'retrobox','sorbet','catppuccin','selenized','jellybeans-nvim','tokyonight','ron','wildcharm','unokai','slate','koehler'}
 color = colors[math.random(#colors)]
 
 function clearall()
@@ -27,10 +27,6 @@ end
 set_col = function(col)
     vim.cmd.colorscheme(col)
     clearall()
-    vim.api.nvim_set_hl(0, "Normal", {bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
-    vim.api.nvim_set_hl(0, 'LineNr', { bg = 'NONE' })
-    vim.api.nvim_set_hl(0, "CursorLine", { bg = "none" })
     vim.api.background = "dark"
 end
 

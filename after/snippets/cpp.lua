@@ -94,5 +94,23 @@ return {
 	    "}"
 	}),
     }),
+    s("Faster", {
+	t({
+	    "#pragma GCC optimize(\"Ofast,unroll-loops\")",
+	    "#pragma GCC target(\"avx2,bmi,bmi2,lzcnt,popcnt\")"
+	}),
+    }),
+    s("Barrett", {
+	t({
+	    "template<class T>",
+	    "ull Barrett(T a){",
+	    "    static ull m = -1ull / Mod;",
+	    "    ull q = (__uint128_t(m) * a) >> 64;",
+	    "    ull r = a - q * Mod;",
+	    "    if(r >= Mod) r -= Mod;",
+	    "    return r;",
+	    "}",
+	}),
+    }),
 }
 
