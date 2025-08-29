@@ -2,7 +2,7 @@
 require('competitest').setup {
 	local_config_file_name = ".competitest.lua",
 
-	floating_border = "rounded",
+	floating_border = "rounded", -- solid,single,double,none,shadow
 	floating_border_highlight = "FloatBorder",
 	picker_ui = {
 		width = 0.2,
@@ -31,7 +31,7 @@ require('competitest').setup {
 		},
 	},
 	runner_ui = {
-		interface = "split", --popup
+		interface = "popup", -- popup/split
 		selector_show_nu = false,
 		selector_show_rnu = false,
 		show_nu = true,
@@ -100,7 +100,7 @@ require('competitest').setup {
 		java = { exec = "java", args = { "$(FNOEXT)" } },
 	},
 	multiple_testing = -1,
-	maximum_time = 5000,
+	maximum_time = 10000,
 	output_compare_method = "squish",
 	view_output_diff = false,
 
@@ -119,10 +119,10 @@ require('competitest').setup {
 	date_format = "%c",
 	received_files_extension = "cpp",
 	received_problems_path = "$(CWD)/$(PROBLEM).$(FEXT)",
-	received_problems_prompt_path = true,
+	received_problems_prompt_path = false,
 	received_contests_directory = "$(CWD)",
 	received_contests_problems_path = "$(PROBLEM).$(FEXT)",
-	received_contests_prompt_directory = true,
+	received_contests_prompt_directory = false,
 	received_contests_prompt_extension = true,
 	open_received_problems = true,
 	open_received_contests = true,
@@ -130,7 +130,6 @@ require('competitest').setup {
 }
 
 -- receive test cases
-vim.keymap.set('n','<leader>g',':CompetiTest receive testcases | echo "ready :)" <CR>', {buffer = true})
+vim.keymap.set('n','<leader>g',':CompetiTest receive testcases | echo "ready :)" <CR>', { noremap = true, silent = true })
 -- run test cases
-vim.keymap.set('n','<leader>x',':CompetiTest run<CR>', {buffer = true})
-
+vim.keymap.set('n','<leader>x',':CompetiTest run<CR>', { noremap = true, silent = true })

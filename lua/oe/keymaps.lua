@@ -6,7 +6,7 @@ kmap("n", "<leader>pv", vim.cmd.Ex)
 
 kmap('n', '<leader>c', ':make<CR>:copen<CR>', {silent = true})
 kmap('n','<C-a>', 'ggVG', {noremap =true, silent = true})
-kmap('n','<leader>y', 'ggVGy', {noremap =true, silent = true})
+kmap('n','<leader>y', ':%y+<CR>', {noremap =true, silent = true})
 
 -- Normal Mode
 kmap("n","<C-h>","<C-w>h", opts)

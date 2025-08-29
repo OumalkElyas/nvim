@@ -64,5 +64,12 @@ return require('packer').startup(function(use)
     }
     use 'dylanaraps/wal.vim'
     use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+    use{
+	'folke/noice.nvim',
+	requires = {
+	    "MunifTanjim/nui.nvim",
+	    "rcarriga/nvim-notify",  -- optional, used if you want notifications
+	}
+    }
 
 end)
