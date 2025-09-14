@@ -1,11 +1,11 @@
 
 require('FTerm').setup({
-    border = 'single',
+    border = 'double', -- single/none
     dimensions  = {
         height = 1.0,
         width = 0.5,
 	x = 1.0, -- X axis of the terminal window
-        y = 0.7, -- Y axis of the terminal window
+        y = 0.3, -- Y axis of the terminal window
     },
 })
 
