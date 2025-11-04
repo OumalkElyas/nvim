@@ -1,7 +1,7 @@
 
 math.randomseed(os.time())
 
-colors = {'retrobox','sorbet','catppuccin','selenized','jellybeans-nvim','tokyonight','ron','wildcharm','unokai','slate','koehler'}
+colors = {'blue','retrobox','sorbet','catppuccin','selenized','jellybeans-nvim','tokyonight','wildcharm','unokai','slate','koehler'}
 color = colors[math.random(#colors)]
 
 function clearall()

@@ -1,11 +1,13 @@
 
 -- Basic nvim-cmp setup
 local cmp = require'cmp'
+local luasnip = require('luasnip')
 
 function Scmp()
     cmp.setup({
 	snippet = {
 	    expand = function(args)
+		luasnip.lsp_expand(args.body)
 		-- You need a snippet engine here if you're going to use snippets
 		-- For now, leave this empty or use something like luasnip later
 	    end,
@@ -19,6 +21,9 @@ function Scmp()
 	}),
 	sources = cmp.config.sources({
 	    { name = 'buffer' },
+	    { name = 'nvim_lsp' },
+	    { name = 'luasnip' },
+	    { name = 'path' },
 	})
     })
 end

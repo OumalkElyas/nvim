@@ -13,33 +13,55 @@ return require('packer').startup(function(use)
 	requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use 'rose-pine/neovim'
-    use "catppuccin/nvim"
+    use { 
+	'rose-pine/neovim',
+	'catppuccin/nvim',
+	'calind/selenized.nvim',
+	'dylanaraps/wal.vim',
+	'ellisonleao/gruvbox.nvim', 
+	'folke/tokyonight.nvim',
+	'AlphaTechnolog/pywal.nvim', as = 'pywal',
+	-- both those for one theme 
+	'rktjmp/lush.nvim',
+	'metalelf0/jellybeans-nvim'
+    }
 
-    -- both those for one theme 
-    use 'rktjmp/lush.nvim' 
-    use 'metalelf0/jellybeans-nvim'
+    use {
+	'neovim/nvim-lspconfig',
+	'ray-x/lsp_signature.nvim'
+    }
+    use "williamboman/mason.nvim"
+   
 
-    use 'nvim-treesitter/nvim-treesitter'
-
-    use 'frabjous/knap'
-    use 'neovim/nvim-lspconfig'
-    use "folke/tokyonight.nvim"
+    use {
+	"tpope/vim-dadbod",           -- main database plugin
+	"kristijanhusak/vim-dadbod-ui" -- optional UI for queries
+    }
+    use { -- useless
+	'eandrju/cellular-automaton.nvim',
+	'ThePrimeagen/vim-be-good'
+    }
+    use {
+	'hrsh7th/nvim-cmp',
+	'hrsh7th/cmp-buffer',
+	'hrsh7th/cmp-nvim-lsp',
+	'saadparwaiz1/cmp_luasnip'
+    }
     use {
 	'xeluxee/competitest.nvim',
-	requires = 'MunifTanjim/nui.nvim',
+	'MunifTanjim/nui.nvim',
+	'folke/noice.nvim',
+	"rcarriga/nvim-notify"  -- optional, used if you want notifications
     }
-    use 'ray-x/lsp_signature.nvim'
-    use 'eandrju/cellular-automaton.nvim' 
-    use "calind/selenized.nvim"
-    use 'L3MON4D3/LuaSnip'
-    use 'iamcco/markdown-preview.nvim'
-    use 'ThePrimeagen/vim-be-good'
-    use "nvim-tree/nvim-tree.lua"
-    use "ellisonleao/gruvbox.nvim" 
 
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-buffer'
+    use 'nvim-treesitter/nvim-treesitter'
+    use 'L3MON4D3/LuaSnip'
+
+    use 'frabjous/knap'
+    use 'iamcco/markdown-preview.nvim'
+    use "nvim-tree/nvim-tree.lua"
+
+    
     ------ need to be configured
     use {
 	'numToStr/Comment.nvim',
@@ -51,25 +73,15 @@ return require('packer').startup(function(use)
 	'MeanderingProgrammer/render-markdown.nvim',
 	after = { 'nvim-treesitter' },
 	requires = { 'echasnovski/mini.nvim', opt = true }, -- if you use the mini.nvim suite
-	requires = { 'echasnovski/mini.icons', opt = true }, -- if you use standalone mini plugins
-	requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
 	config = function()
 	    require('render-markdown').setup({})
 	end,
     })
     use 'numToStr/FTerm.nvim'
-    use {
-	'nvim-lualine/lualine.nvim',
-	requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
-    use 'dylanaraps/wal.vim'
-    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
-    use{
-	'folke/noice.nvim',
-	requires = {
-	    "MunifTanjim/nui.nvim",
-	    "rcarriga/nvim-notify",  -- optional, used if you want notifications
-	}
-    }
+    use 'nvim-lualine/lualine.nvim'
+
+    use {'akinsho/bufferline.nvim', tag = "*"}
+    use 'nvim-tree/nvim-web-devicons'
+    use "NStefan002/speedtyper.nvim"
 
 end)

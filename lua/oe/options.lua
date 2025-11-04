@@ -9,6 +9,7 @@ local options = {
     guifont = "monospace:h17",
     relativenumber = true,
     cmdheight = 2,
+    scrolloff = 999,
     mouse = "a",
     clipboard="unnamedplus",
     updatetime = 300, -- faster completion (4000ms defaultj)

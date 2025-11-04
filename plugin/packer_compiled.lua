@@ -105,6 +105,16 @@ _G.packer_plugins = {
     path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
   ["competitest.nvim"] = {
     loaded = true,
     path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/competitest.nvim",
@@ -144,6 +154,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["mini.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/opt/mini.nvim",
+    url = "https://github.com/echasnovski/mini.nvim"
   },
   neovim = {
     loaded = true,
@@ -191,9 +212,8 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/oumalk/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    loaded = true,
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
@@ -205,6 +225,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["pywal.nvim"] = {
+    loaded = true,
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/pywal.nvim",
+    url = "https://github.com/AlphaTechnolog/pywal.nvim"
   },
   ["render-markdown.nvim"] = {
     config = { "\27LJ\2\nA\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\20render-markdown\frequire\0" },
@@ -218,6 +243,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/selenized.nvim",
     url = "https://github.com/calind/selenized.nvim"
+  },
+  ["speedtyper.nvim"] = {
+    loaded = true,
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/speedtyper.nvim",
+    url = "https://github.com/NStefan002/speedtyper.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -233,6 +263,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/vim-be-good",
     url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
+  ["vim-dadbod"] = {
+    loaded = true,
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/vim-dadbod",
+    url = "https://github.com/tpope/vim-dadbod"
+  },
+  ["vim-dadbod-ui"] = {
+    loaded = true,
+    path = "/home/oumalk/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
+    url = "https://github.com/kristijanhusak/vim-dadbod-ui"
   },
   ["wal.vim"] = {
     loaded = true,

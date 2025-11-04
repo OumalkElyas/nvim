@@ -3,7 +3,7 @@ local kmap = vim.keymap.set
 
 -- ctex is a costumed command
 --vim.bo.makeprg = 'cd %:h && bash -i "ctex"'
-vim.g.vimtex_view_methode = "zathura"
+vim.g.vimtex_view_methode = "okular"
 
 
 vim.api.nvim_buf_set_keymap(0, 'n', '<leader>l', ':w<CR>:make<CR>', {noremap = true, silent = true})
@@ -11,9 +11,9 @@ vim.api.nvim_buf_set_keymap(0, 'n', '<leader>l', ':w<CR>:make<CR>', {noremap = t
 local clean_latex = " && rm -f *.aux *.log *.out *.toc *.synctex.gz *.fls *.fdb_latexmk && rm -rf _minted-main"
 local gknapsettings = {
     textopdf = "pdflatex -shell-escape -interaction=nonstopmode -synctex=1 %docroot%" .. clean_latex,
-    textopdfviewerlaunch = "zathura --synctex-editor-command 'nvim --headless -es --cmd \"lua require('\"'\"'knaphelper'\"'\"').relayjump('\"'\"'%servername%'\"'\"','\"'\"'%{input}'\"'\"',%{line},0)\"' %outputfile%",
+    textopdfviewerlaunch = "okular --unique %outputfile%",
     textopdfviewerrefresh = "none",
-    textopdfforwardjump = "zathura --synctex-forward=%line%:%column%:%srcfile% %outputfile%"
+    textopdfforwardjump = "okular --unique %outputfile%'#src:%line% '%srcfile%"
 }
 vim.g.knap_settings = gknapsettings
 

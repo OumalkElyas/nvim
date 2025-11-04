@@ -36,7 +36,7 @@
   close_timeout = 4000, -- close floating window after ms when laster parameter is entered
   fix_pos = false,  -- set to true, the floating window will not auto-close until finish all parameters
   hint_enable = true, -- virtual hint enable
-  hint_prefix = "🐼 ",  -- Panda for parameter, NOTE: for the terminal not support emoji, might crash
+  hint_prefix = "📌 ",  -- Panda 🐼 for parameter, NOTE: for the terminal not support emoji, might crash
   -- or, provide a table with 3 icons
   -- hint_prefix = {
   --     above = "↙ ",  -- when the hint is on the line above the current line
@@ -49,7 +49,7 @@
   -- return 'right_align' to display hint right aligned in the current line
   hi_parameter = "LspSignatureActiveParameter", -- how your parameter will be highlight
   handler_opts = {
-    border = "rounded"   -- double, rounded, single, shadow, none, or a table of borders
+    border = "double"   -- double, rounded, single, shadow, none, or a table of borders
   },
 
   always_trigger = false, -- sometime show signature on new line or in middle of parameter can be confusing, set it to false for #58
@@ -81,8 +81,7 @@
   -- e.g. keymaps = { { 'j', '<C-o>j' }, } this map j to <C-o>j in floating window
   -- <M-d> and <M-u> are default keymaps to move cursor up and down
 }
+require('lsp_signature').on_attach(cfg)
 
-vim.api.nvim_create_user_command("Lsp", function()
-    vim.lsp.enable('clangd')
-    require('lsp_signature').on_attach(cfg, vim.api.nvim_get_current_buf())
-end, {})
+
+
