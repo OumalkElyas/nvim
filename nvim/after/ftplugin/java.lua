@@ -4,11 +4,10 @@ local function done()
     vim.cmd("echohl MoreMsg | echo \"done\" | echohl None")
 end
 
-vim.bo.makeprg='g++ -O2 -Wall -std=c++23 -DOE -Wextra -o %:r %'
+vim.bo.makeprg='javac %'
 vim.bo.errorformat = '%f:%l:%c %m'
 
 vim.keymap.set('n','<leader>c',':silent w | make | echo "done" <CR>', {buffer = true})
--- vim.keymap.set('n','<leader>r',':!xrun %:r', {buffer = true})
 
 -- for running
 vim.keymap.set('n', '<leader>r', ':Fterm ./%:r<CR>i', { buffer = true })
